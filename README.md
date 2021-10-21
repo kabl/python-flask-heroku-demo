@@ -73,7 +73,13 @@ git checkout -b master
 1.) Create a Heroku account
 2.) Install Heroku CLI
 
-Procfile
+File: Procfile
 ```bash
 web: gunicorn app:app
 ```
+
+```bash
+heroku create
+git push heroku master
+```
+
