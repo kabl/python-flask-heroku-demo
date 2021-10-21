@@ -96,6 +96,10 @@ heroku create
 # > https://murmuring-plains-11587.herokuapp.com/ | https://git.heroku.com/murmuring-plains-11587.git
 
 git push heroku master
+
+# After the git push Heroku should build and start the application
+# Show the logs
+heroku logs --tail
 ```
 
 ### Set the environment variable
