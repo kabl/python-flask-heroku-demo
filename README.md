@@ -8,6 +8,9 @@ Demonstration of Python with Flask (REST API) and a deployment to Heroku
 pip  install flask
 pip install python-dotenv
 
+# For Heroku
+pip install gunicorn
+
 # Save dependencies to requirements.tx
 python3 -m pip freeze > requirements.txt
 ```
