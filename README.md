@@ -2,6 +2,12 @@
 
 Demonstration of Python with Flask (REST API) and a deployment to Heroku
 
+Goals:
+- Create a simple REST application
+- On the local machine we want that the API `/greeting` returns "Hello World from localhost"
+- Deployment to Heroku
+- On the Heroku deployment we want that the API `/greeting` returns "Hello World from Heroku"
+
 ## Dependencies
 
 ```bash
@@ -11,7 +17,7 @@ pip install python-dotenv
 # For Heroku
 pip install gunicorn
 
-# Save dependencies to requirements.tx
+# Save dependencies to requirements.txt
 python3 -m pip freeze > requirements.txt
 ```
 
@@ -65,7 +71,7 @@ __pycache__
 .idea
 ```
 
-Commit the files to git
+Commit the files to git. And after checkout to the master branch.
 
 ```bash
 git checkout -b master
@@ -73,14 +79,15 @@ git checkout -b master
 
 ## Heroku Deployment
 
-1.) Create a Heroku account
-2.) Install Heroku CLI
+- Create a Heroku account
+- Install Heroku CLI
 
 File: Procfile
 ```bash
 web: gunicorn app:app
 ```
 
+Create the Heroku application
 ```bash
 heroku create
 
@@ -97,3 +104,11 @@ git push heroku master
 heroku config:set MESSAGE="Hello World from Heroku" -a murmuring-plains-11587
 ```
 
+### Validate the deployment
+
+Validate the response
+```bash
+curl https://murmuring-plains-11587.herokuapp.com/greeting
+
+# Should print: Message: Hello World from Heroku
+```
