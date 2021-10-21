@@ -3,6 +3,9 @@ import os
 
 app = Flask(__name__)
 
+@app.route("/")
+def root():
+    return "Request with /greeting"
 
 @app.route("/greeting")
 def greeting():

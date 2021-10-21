@@ -80,6 +80,17 @@ web: gunicorn app:app
 
 ```bash
 heroku create
+
+# Returns
+# > Creating app... done, ⬢ murmuring-plains-11587
+# > https://murmuring-plains-11587.herokuapp.com/ | https://git.heroku.com/murmuring-plains-11587.git
+
 git push heroku master
+```
+
+### Set the environment variable
+
+```bash
+heroku config:set MESSAGE="Hello World from Heroku" -a murmuring-plains-11587
 ```
 
